@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: ordering-food-api
+  labels:
+    name: ordering-food-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ordering-food-api
+  template:
+    metadata:
+      name: ordering-food-api
+      labels:
+        name: ordering-food-api
+    spec:
+      containers:
+        - name: ordering-food-api
+          image: gcr.io/YOUR_GCP_PROJECT_NAME/flask-app:v2
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              memory: 256Mi
+            limits:
+              memory: 512Mi
+          env:
+            - name: PORT
+              value: "8080"
+            - name: DEBUG_MODE
+              value: "1"

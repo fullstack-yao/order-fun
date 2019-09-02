@@ -1,17 +1,31 @@
 # Client Side
 # See https:client/client/helpclient/githubclient/comclient/articlesclient/ignoring-filesclient/ for more about ignoring filesclient/
 
+# misc
+/.DS_Store
+
 # dependencies
-client/node_modules
-client/pnp
+/client/node_modules/
+/client/pnp
 
 # testing
-client/coverage
+/client/coverage
 
 # production
-client/build
+/client/build
 
-# misc
-.DS_Store
-client/yarn.lock
-client/package-lock.json
+/client/.DS_Store
+/client/src/.DS_Store
+/client/yarn.lock
+/client/package-lock.json
+
+# Server Side
+
+/server/venv
+/server/__pycache__
+/server/node_modules
+/server/package-lock.json
+/server/.DS_Store
+/server/app/main/__pycache__/
+/server/app/__init__.py
+/server/app/__pycache__
